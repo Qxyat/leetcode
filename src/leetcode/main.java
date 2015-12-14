@@ -14,6 +14,6 @@ public class main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String[]data={"This", "is", "an", "example", "of", "text", "justification."};
-		System.out.println(new TextJustification_68().fullJustify(data, 16));
+		System.out.println(new EditDistance_72().minDistance("ab", "bc"));
 	}
 }
