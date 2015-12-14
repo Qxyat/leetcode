@@ -13,7 +13,7 @@ public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[][]data=new int[][]{{0,0,0},{0,1,0},{0,0,0}};
-		System.out.println(new UniquePathsII_63().uniquePathsWithObstacles(data));
+		String[]data={"This", "is", "an", "example", "of", "text", "justification."};
+		System.out.println(new TextJustification_68().fullJustify(data, 16));
 	}
 }
