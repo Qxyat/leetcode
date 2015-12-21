@@ -13,7 +13,7 @@ public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String[]data={"This", "is", "an", "example", "of", "text", "justification."};
-		System.out.println(new EditDistance_72().minDistance("ab", "bc"));
+		
+		System.out.println(new GrayCode_89().grayCode(0));
 	}
 }
