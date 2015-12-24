@@ -19,6 +19,7 @@ public class SubsetsII_90 {
 		if(one_res.size()>=need){
 			List<Integer>tmp= new ArrayList<Integer>(one_res);
 			res.add(tmp);
+			return;
 		}
 		int i=pos;
 		while(i<nums.length){
