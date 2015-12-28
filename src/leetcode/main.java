@@ -14,6 +14,6 @@ public class main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		System.out.println(new GrayCode_89().grayCode(1));
+		System.out.println(new InterleavingString_97().isInterleave("aab", "dbbc", "aadbbcb"));
 	}
 }
