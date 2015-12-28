@@ -1,7 +1,5 @@
 package leetcode;
 
-import com.sun.org.apache.regexp.internal.recompile;
-
 public class JumpGame_55 {
 	public boolean canJump(int[] nums) {
         int farest=0;

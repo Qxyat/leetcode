@@ -1,8 +1,5 @@
 package leetcode;
 
-import java.util.HashMap;
-import java.util.HashSet;
-
 public class UniquePaths_62 {
 	
 	public int uniquePaths(int m, int n) {

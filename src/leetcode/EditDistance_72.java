@@ -1,6 +1,5 @@
 package leetcode;
 
-import java.util.ArrayList;
 
 public class EditDistance_72 {
 	public int minDistance(String word1, String word2) {

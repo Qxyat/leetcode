@@ -1,7 +1,5 @@
 package leetcode;
 
-import java.util.HashMap;
-
 public class ClimbingStairs_70 {
 	public int climbStairs(int n) {
 		int[] res=new int[n>=2?n+1:3];

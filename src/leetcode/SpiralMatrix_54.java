@@ -3,8 +3,6 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.omg.PortableInterceptor.INACTIVE;
-
 public class SpiralMatrix_54 {
 	public List<Integer> spiralOrder(int[][] matrix) {
 		List<Integer> result=new ArrayList<Integer>();

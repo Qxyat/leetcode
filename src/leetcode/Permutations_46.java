@@ -2,14 +2,7 @@ package leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
-
-import org.omg.PortableInterceptor.INACTIVE;
-
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
-
 
 public class Permutations_46 {
 	public List<List<Integer>> permute(int[] nums) {
