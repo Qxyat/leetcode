@@ -4,11 +4,15 @@ public class SortList_148 {
 	class Pair{
 		ListNode head;
 		ListNode rear;
+		public  Pair() {
+			head=null;
+			rear=null;
+		}
 	}
 	public ListNode sortList(ListNode head) {
 		Pair pair=new Pair();
 		sort(head,pair);
-		return pair.head;  	
+		return pair.head; 
     }
 	public void sort(ListNode head,Pair pair) {
 		if(head==null){
@@ -16,10 +20,13 @@ public class SortList_148 {
 		}
         ListNode lefthead=new ListNode(0);
         ListNode leftrear=lefthead;
+        ListNode midhead=new ListNode(0);
+        ListNode midrear=midhead;
         ListNode righthead =new ListNode(0);
         ListNode rightrear=righthead;
         ListNode judgenode=head;
-        ListNode cur=head.next;
+        ListNode cur=head;
+        
         while(cur!=null){
         	ListNode tmp=cur.next;
         	cur.next=null;
@@ -27,9 +34,13 @@ public class SortList_148 {
         		leftrear.next=cur;
         		leftrear=cur;
         	}
-        	else{
+        	else if(cur.val>judgenode.val){
         		rightrear.next=cur;
         		rightrear=cur;
+        	}
+        	else{
+        		midrear.next=cur;
+        		midrear=cur;
         	}
         	cur=tmp;
         }
@@ -37,21 +48,17 @@ public class SortList_148 {
         Pair right=new Pair();
         sort(lefthead.next,left);
         sort(righthead.next,right);
-        judgenode.next=right.head;
+        midrear.next=right.head;
         if(left.rear==null){
-    		pair.head=judgenode;
-    		if(right.rear!=null)
-        		pair.rear=right.rear;
-        	else
-        		pair.rear=judgenode;
+    		pair.head=midhead.next;
         }
         else{
-        	left.rear.next=judgenode;
+        	left.rear.next=midhead.next;
         	pair.head=left.head;
-        	if(right.rear!=null)
-        		pair.rear=right.rear;
-        	else
-        		pair.rear=left.rear;
         }
+        if(right.rear!=null)
+    		pair.rear=right.rear;
+    	else
+    		pair.rear=midrear;
 	}
 }
