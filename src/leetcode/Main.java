@@ -4,11 +4,13 @@ import java.util.Random;
 
 public class Main {
 	public static void main(String[] args) {
-		int[][] data=new int[][]{{0,0},{-1,-1},{2,2}};
-		Point[] points=new Point[data.length];
-		for(int i=0;i<data.length;i++){
-			points[i]=new Point(data[i][0], data[i][1]);
-		}
-		new MaxPointsonaLine_149().maxPoints(points);
+		TreeNode root1=new TreeNode(1);
+		TreeNode root2=new TreeNode(2);
+		TreeNode root3=new TreeNode(3);
+		TreeNode root4=new TreeNode(4);
+		root1.left=root2;
+		root1.right=root3;
+		root2.left=root4;
+		System.out.println(new CountCompleteTreeNodes_222().countNodes(root1));
 	}
 }
