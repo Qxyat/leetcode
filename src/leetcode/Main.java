@@ -11,6 +11,6 @@ public class Main {
 		root1.left=root2;
 		root1.right=root3;
 		root2.left=root4;
-		System.out.println(new CountCompleteTreeNodes_222().countNodes(root1));
+		System.out.println(new MajorityElementII_229().majorityElement(new int[]{1,2,3,4,2,2}));
 	}
 }
