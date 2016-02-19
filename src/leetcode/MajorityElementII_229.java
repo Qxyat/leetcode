@@ -8,7 +8,7 @@ public class MajorityElementII_229 {
         List<Integer> res=new ArrayList<Integer>();
         int count1=0,count2=0,num1=0,num2=0;
         for(int tmp:nums){
-        	if(count1==0){
+        	if(count1==0&&tmp!=num2){
         		num1=tmp;
         		count1++;
         	}
