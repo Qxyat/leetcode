@@ -6,6 +6,7 @@ public class WordPattern_290 {
 	public boolean wordPattern(String pattern, String str) {
        HashMap<Character, String>data=new HashMap<Character,String>();
        HashMap<String, Character>data2=new HashMap<String, Character>();
+       
        int strpos=0;
        for(int i=0;i<pattern.length();i++){
     	   char tmp=pattern.charAt(i);
