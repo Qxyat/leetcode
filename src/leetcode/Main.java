@@ -21,16 +21,9 @@ public class Main {
 			throw new myException();
 	}
 	public static void main(String[] args) {
-		try {
-			test(0);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			double a=0.0;
-			if(a==0.00){
-				System.out.println("yes");
-			}
-			System.out.println(wrongCode.C);
-		}
+		//String data="9,3,4,#,#,1,#,#,2,#,6,#,#";
+		//String data="1,#";
+		String[][] data=new String[][]{{"JFK","SFO"},{"JFK","ATL"},{"SFO","ATL"},{"ATL","JFK"},{"ATL","SFO"}};
+		System.out.println(new ReconstructItinerary_332().findItinerary(data));
 	}
 }
