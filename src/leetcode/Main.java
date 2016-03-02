@@ -1,6 +1,8 @@
 package leetcode;
 
 import java.util.ArrayList;
+import java.util.List;
+
 import leetcode.PeekingIterator_284.PeekingIterator;
 
 class myException extends Exception{
@@ -15,15 +17,24 @@ class myException extends Exception{
 	}
 }
 public class Main {
-	static enum wrongCode {A,B,C};
-	public static void test(int a) throws myException{
-		if(a==0)
-			throw new myException();
+	private String value=null;
+	
+	public Main(String v){
+		value=v;
 	}
-	public static void main(String[] args) {
-		//String data="9,3,4,#,#,1,#,#,2,#,6,#,#";
-		//String data="1,#";
-		String[][] data=new String[][]{{"JFK","SFO"},{"JFK","ATL"},{"SFO","ATL"},{"ATL","JFK"},{"ATL","SFO"}};
-		System.out.println(new ReconstructItinerary_332().findItinerary(data));
+	public boolean equals(Main m){
+		System.out.println("hERE");
+		if(m==this)
+			return true;
+		if(m instanceof Main){
+			Main mn=(Main)m;
+			return mn.value.equals(value);
+		}
+		return false;
+	}
+	public static void main(String[] args){
+		String s1="a";
+		String s2=".b";
+		System.out.println(new RegularExpressionMatching_10().isMatch(s1, s2));
 	}
 }
