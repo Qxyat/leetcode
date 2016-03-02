@@ -33,8 +33,6 @@ public class Main {
 		return false;
 	}
 	public static void main(String[] args){
-		String s1="a";
-		String s2=".b";
-		System.out.println(new RegularExpressionMatching_10().isMatch(s1, s2));
+		System.out.println(new GenerateParentheses_22().generateParenthesis(3));
 	}
 }
