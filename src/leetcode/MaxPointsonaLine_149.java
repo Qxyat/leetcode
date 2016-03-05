@@ -3,44 +3,46 @@ package leetcode;
 import java.util.HashMap;
 
 public class MaxPointsonaLine_149 {
-	public class Pair{
-		double k;
-		double b;
-		int x;
-		public Pair(double k,double b,int x) {
-			this.k=k;
-			this.b=b;
-			this.x=x;
-		}
-	}
+	
 	public int maxPoints(Point[] points) {
-        if(points.length<2)
-        	return points.length;
-        HashMap<Pair, Integer> cache=new HashMap<Pair,Integer>();
         int res=0;
-        for(int i=1;i<points.length;i++){
-        	for(int j=0;j<i;j++){
-        		Pair pair=GeneratePair(points[j], points[i]);
-        		int tmp;
-        		if(cache.containsKey(pair)){
-        			tmp=cache.get(pair);
-        			tmp++;
+        HashMap<Integer, HashMap<Integer, Integer>>cache=new HashMap<Integer,HashMap<Integer,Integer>>();
+        for(int i=0;i<points.length;i++){
+        		cache.clear();
+        		int same=0;
+        		int max=0;
+        		for(int j=i+1;j<points.length;j++){
+        			int x=points[j].x-points[i].x;
+        			int y=points[j].y-points[i].y;
+        			if(x==0&&y==0){
+        				same++;
+        				continue;
+        			}
+        			int gcd=generateGCD(x, y);
+        			x/=gcd;
+        			y/=gcd;
+        			if(cache.containsKey(x)){
+        				if(cache.get(x).containsKey(y)){
+        					cache.get(x).put(y, cache.get(x).get(y)+1);
+        				}
+        				else{
+        					cache.get(x).put(y, 1);
+        				}
+        			}
+        			else{
+        				HashMap<Integer, Integer>tmp=new HashMap<Integer,Integer>();
+        				tmp.put(y, 1);
+        				cache.put(x, tmp);
+        			}
+        			max=Integer.max(max, cache.get(x).get(y));
         		}
-        		else{
-        			tmp=2;
-        		}
-        		res=Integer.max(res, tmp);
-    			cache.put(pair, tmp);
-        	}
+        		res=Integer.max(res, max+same+1);
         }
         return res;
     }
-	public Pair GeneratePair(Point p1,Point p2){
-		if(p1.x==p2.x){
-			return new Pair(0, 0, p1.x);
-		}
-		double k=((double)p1.y-p2.y)/(p1.x-p2.x);
-		double b=p1.y-k*p1.x;
-		return new Pair(k, b, 0);
+	public int generateGCD(int a,int b){
+		if(b==0)
+			return a;
+		return generateGCD(b, a%b);
 	}
 }

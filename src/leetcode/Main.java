@@ -1,7 +1,9 @@
 package leetcode;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.PriorityQueue;
 
 import leetcode.PeekingIterator_284.PeekingIterator;
 
@@ -16,23 +18,28 @@ class myException extends Exception{
 		
 	}
 }
+class A{
+	String name;
+	void value(){
+		name="China";
+	}
+}
+class B extends A{
+	public String name;
+	void value(){
+		name="Hefei";
+		super.value();
+		System.out.println(name);
+		System.out.println(super.name);
+	}
+}
+abstract class C{
+	abstract public void Test();
+}
 public class Main {
-	private String value=null;
-	
-	public Main(String v){
-		value=v;
-	}
-	public boolean equals(Main m){
-		System.out.println("hERE");
-		if(m==this)
-			return true;
-		if(m instanceof Main){
-			Main mn=(Main)m;
-			return mn.value.equals(value);
-		}
-		return false;
-	}
 	public static void main(String[] args){
-		System.out.println(new GenerateParentheses_22().generateParenthesis(3));
+		String s="a";
+	   
+	    System.out.println(s);
 	}
 }
