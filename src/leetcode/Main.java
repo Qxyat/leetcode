@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 import leetcode.PeekingIterator_284.PeekingIterator;
+import leetcodeReview.MedianofTwoSortedArrays_4;
 
 class myException extends Exception{
 	public myException() {
@@ -38,8 +39,9 @@ abstract class C{
 }
 public class Main {
 	public static void main(String[] args){
-		String s="a";
-	   
-	    System.out.println(s);
+		int[][] data=new int[][]{{0,-3}};
+		int[] data1=new int[]{};
+		int[] data2=new int[]{1};
+		System.out.println(new MedianofTwoSortedArrays_4().);
 	}
 }
