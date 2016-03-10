@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
+import java.util.*;
 
 import leetcode.PeekingIterator_284.PeekingIterator;
 import leetcodeReview.MedianofTwoSortedArrays_4;
@@ -39,9 +40,6 @@ abstract class C{
 }
 public class Main {
 	public static void main(String[] args){
-		int[][] data=new int[][]{{0,-3}};
-		int[] data1=new int[]{};
-		int[] data2=new int[]{1};
-		System.out.println(new MedianofTwoSortedArrays_4().);
+		new ContainsDuplicateIII_220().containsNearbyAlmostDuplicate(new int[]{-3,3}, 2, 4);
 	}
 }
