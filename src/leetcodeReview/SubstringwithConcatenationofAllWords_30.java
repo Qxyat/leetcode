@@ -55,6 +55,7 @@ public class SubstringwithConcatenationofAllWords_30 {
 	        				String lastString=s.substring(beginPos,beginPos+wordLen);
 	        				curMap.put(lastString, curMap.get(lastString)-1);
 	        				res.add(beginPos);
+	        				beginPos+=wordLen;
 	        			}
 	        		}
 	        		else{
