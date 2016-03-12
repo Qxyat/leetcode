@@ -40,6 +40,12 @@ abstract class C{
 }
 public class Main {
 	public static void main(String[] args){
-		new ContainsDuplicateIII_220().containsNearbyAlmostDuplicate(new int[]{-3,3}, 2, 4);
+		PriorityQueue<Integer> priorityQueue=new PriorityQueue<Integer>();
+		
+		priorityQueue.offer(3);
+		priorityQueue.offer(3);
+		while(!priorityQueue.isEmpty()){
+			System.out.println(priorityQueue.poll());
+		}
 	}
 }

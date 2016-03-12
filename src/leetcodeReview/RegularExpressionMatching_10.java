@@ -4,7 +4,6 @@ import leetcode.RandomListNode;
 
 public class RegularExpressionMatching_10 {
 	public boolean isMatch(String s, String p) {
-		new RandomListNode()
 		if(s==null||p==null)
 			return false;
 		boolean[][]res=new boolean[s.length()+1][p.length()+1];
