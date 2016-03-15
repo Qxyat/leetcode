@@ -40,12 +40,6 @@ abstract class C{
 }
 public class Main {
 	public static void main(String[] args){
-		PriorityQueue<Integer> priorityQueue=new PriorityQueue<Integer>();
-		
-		priorityQueue.offer(3);
-		priorityQueue.offer(3);
-		while(!priorityQueue.isEmpty()){
-			System.out.println(priorityQueue.poll());
-		}
+		System.out.println(new NimGame_292().canWinNim(9));
 	}
 }

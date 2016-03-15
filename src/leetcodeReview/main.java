@@ -10,8 +10,8 @@ import java.util.SortedSet;
 
 public class main {
 	public static void main(String[] argc){
-		new SubstringwithConcatenationofAllWords_30().findSubstring("barfoofoobarthefoobarman",new String[]{
-"bar","foo","the"});
+		int[] data=new int[]{};
+		new PermutationsII_47().permuteUnique(data);
 	}
 	public void A(String str,int i){
 		byte b[]=new byte[1024];
