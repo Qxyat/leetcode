@@ -8,10 +8,11 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.SortedSet;
 
+import com.sun.org.apache.bcel.internal.generic.NEW;
+
 public class main {
 	public static void main(String[] argc){
-		int[] data=new int[]{};
-		new PermutationsII_47().permuteUnique(data);
+		System.out.println(new LargestRectangleinHistogram_84().largestRectangleArea(new int[]{3,1,3,4}));
 	}
 	public void A(String str,int i){
 		byte b[]=new byte[1024];

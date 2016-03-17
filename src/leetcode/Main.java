@@ -40,6 +40,8 @@ abstract class C{
 }
 public class Main {
 	public static void main(String[] args){
-		System.out.println(new NimGame_292().canWinNim(9));
+		int[] data={1,3,5};
+		RangeSumQueryMutable_307 rsq=new RangeSumQueryMutable_307(data);
+		System.out.println(rsq.sumRange(0, 2));
 	}
 }
