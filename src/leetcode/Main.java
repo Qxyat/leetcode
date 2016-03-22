@@ -38,10 +38,12 @@ class B extends A{
 abstract class C{
 	abstract public void Test();
 }
+abstract class MyA{
+	
+}
 public class Main {
 	public static void main(String[] args){
-		int[] data={1,3,5};
-		RangeSumQueryMutable_307 rsq=new RangeSumQueryMutable_307(data);
-		System.out.println(rsq.sumRange(0, 2));
+		new SuperUglyNumber_313().nthSuperUglyNumber(10, new int[]{2,3,5});
+
 	}
 }

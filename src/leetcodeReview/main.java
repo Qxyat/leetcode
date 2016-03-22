@@ -3,16 +3,23 @@ package leetcodeReview;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayDeque;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.PriorityQueue;
 import java.util.Queue;
+import java.util.Set;
 import java.util.SortedSet;
 
+import com.sun.javafx.sg.prism.web.NGWebView;
 import com.sun.org.apache.bcel.internal.generic.NEW;
 
 public class main {
 	public static void main(String[] argc){
-		System.out.println(new LargestRectangleinHistogram_84().largestRectangleArea(new int[]{3,1,3,4}));
+		Set<String> set=new HashSet<String>();
+		String[] data=new String[]{"ted","tex","red","tax","tad","den","rex","pee"};
+		for(int i=0;i<data.length;i++)
+			set.add(data[i]);
+		System.out.println(new WordLadderII_126().findLadders("red", "tax", set));
 	}
 	public void A(String str,int i){
 		byte b[]=new byte[1024];
