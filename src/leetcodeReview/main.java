@@ -19,7 +19,8 @@ public class main {
 		String[] data=new String[]{"ted","tex","red","tax","tad","den","rex","pee"};
 		for(int i=0;i<data.length;i++)
 			set.add(data[i]);
-		System.out.println(new WordLadderII_126().findLadders("red", "tax", set));
+		//System.out.println(new PalindromePartitioningII_132().minCut("abbab"));
+		new SurroundedRegions_130().solve(new char[][]{{'O','O','O'},{'O','O','O'},{'O','O','O'}});
 	}
 	public void A(String str,int i){
 		byte b[]=new byte[1024];
