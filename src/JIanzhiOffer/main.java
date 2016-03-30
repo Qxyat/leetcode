@@ -14,7 +14,38 @@ import com.sun.org.apache.bcel.internal.generic.NEW;
 import JIanzhiOffer.P26_150.RandomListNode;
 
 public class main {
+	static class Solution {
+	    public int minNumberInRotateArray(int [] array) {
+	    	if(array.length==0)
+	    		return 0;
+	    	int left=0,right=array.length-1;
+		        while(left<right){
+		            int mid=(left+right)>>1;
+			        if(array[left]==array[right]){
+			        		right--;
+			        		continue;
+			        }
+	            if(array[left]<array[mid]&&array[mid]<array[right]){
+	                return array[left];
+	            }
+	            else if(array[left]<=array[mid]&&array[mid]>array[right]){
+	                left=mid+1;
+	            }
+	            else if(array[left]>array[mid]&&array[mid]<array[right]){
+	                right=mid;
+	            }
+	            else{
+	                right--;
+	            }
+	      
+	        }
+	        //return left;
+	        return array[left];
+	    }
+	}
+	
 	public static void main(String[] argc){
-		System.out.println(new P65_290().maxInWindows(new int[]{2,3,4,2,6,2,5,1}, 3));
+		int[]data={};
+		System.out.println(new Solution().minNumberInRotateArray(data));
 	}
 }
